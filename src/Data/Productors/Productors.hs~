@@ -1,0 +1,17 @@
+module Data.Productors where
+
+  class Functor f => Effect f where
+
+  class (Effect f, Effect g) => EffectorLT f g where
+    liftEff :: (f a) -> (g a)
+
+  class (Effect f, Effect g, Effect h) => EffectorM f g h | f g -> h where
+    multEff :: g (f a) -> h a
+
+
+  (>==>) :: EffectorM m1 m2 m => (a -> m1 b) -> (b -> m2 c) -> a -> m c
+  f >==> g = multEff (fmap g :: m1 b -> m1 (m2 c)) . f
+
+  (>>==) :: EffectorM m1 m2 m => m1 a -> (a -> m2 b) -> m b
+  x >>== f = multEff (fmap f :: m1 a -> m1 (m2 c)) x
+  

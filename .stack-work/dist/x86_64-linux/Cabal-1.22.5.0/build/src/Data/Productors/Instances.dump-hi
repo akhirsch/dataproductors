@@ -1,0 +1,260 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-16 00:31:25.98039 UTC
+
+interface datap_FBufWoQ2EXj4DfMtluHI6f:Data.Productors.Instances [orphan module] 7103
+  interface hash: 8d16142299b2ba2c171abdeb1631ec6c
+  ABI hash: 513ebb800c239b3f3cdd7788ba7b197c
+  export-list hash: 1b8c4b164fc7b99ba40fb0794c7f5bf9
+  orphan hash: acc6ba8c78b7728148fe0d8c6d08eede
+  flag hash: f9d2f200744111c29bf23aa0ca957b9a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+module dependencies: Data.Productors
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Functor.Identity 33f652d04ce95624f8f871881fa3b737
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Data.Productors 5e26c5fd9517b9d48439382d32d27dbe
+  exports: 644a4ea64675148819abe0cd6199262d
+  Effect 4e223f6cf984c7024507896ef8caa285
+  EffectorLT bcd98f0836d8a3ff46614bfbfefef4df
+  EffectorM 19f197fd282329b7abae91fe724d3254
+  eta 1918e51a1fc19794dd149887183b77c2
+  liftEff 71884766bcc7cd3ba264b188f63e50b6
+  multEff 0869e24590a79e7ec9ee295bc9e62a1c
+6333aed446e0dd8749ebf011256ba0bd
+  $fEffectm ::
+    (GHC.Base.Functor m, GHC.Base.Monad m) => Data.Productors.Effect m
+  DFunId[1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,1*U(A,A,A,1*U,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (m :: * -> *)
+                      $dFunctor :: GHC.Base.Functor m
+                      $dMonad :: GHC.Base.Monad m.
+                  @ m
+                  $dFunctor
+                  (Data.Productors.Instances.$fEffectm_$ceta
+                     @ m
+                     $dFunctor
+                     $dMonad) -}
+ba5960aee8001faf74dd5da231c84d5b
+  $fEffectm_$ceta ::
+    (GHC.Base.Functor m, GHC.Base.Monad m) => forall a. a -> m a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,A><S(LLLSL),1*U(A,A,A,1*U,A)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (m :: * -> *)
+                   $dFunctor :: GHC.Base.Functor m
+                   $dMonad :: GHC.Base.Monad m
+                   @ a ->
+                 GHC.Base.return @ m $dMonad @ a) -}
+1f8415008469948df2a8a144b878ecba
+  $fEffectorLTIdentityf ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    Data.Productors.EffectorLT Data.Functor.Identity.Identity f
+  DFunId[1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U(U,U)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (f :: * -> *)
+                      $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                      $dEffect1 :: Data.Productors.Effect f.
+                  @ Data.Functor.Identity.Identity
+                  @ f
+                  $dEffect
+                  $dEffect1
+                  (Data.Productors.Instances.$fEffectorLTIdentityf_$cliftEff
+                     @ f
+                     $dEffect
+                     $dEffect1) -}
+fe836c9c7143d03a8261729d0648a062
+  $fEffectorLTIdentityf_$cliftEff ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    forall a. Data.Functor.Identity.Identity a -> f a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(LC(S)),1*U(A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ (f :: * -> *)
+                   $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                   $dEffect1 :: Data.Productors.Effect f
+                   @ a
+                   ds :: Data.Functor.Identity.Identity a ->
+                 Data.Productors.eta
+                   @ f
+                   $dEffect1
+                   @ a
+                   ds `cast` (Data.Functor.Identity.NTCo:Identity[0] <a>_R)) -}
+93de36411b5918af023852ffd8d3ed17
+  $fEffectorMIdentityff ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    Data.Productors.EffectorM Data.Functor.Identity.Identity f f
+  DFunId[1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (f :: * -> *)
+                      $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                      $dEffect1 :: Data.Productors.Effect f.
+                  @ Data.Functor.Identity.Identity
+                  @ f
+                  @ f
+                  $dEffect
+                  $dEffect1
+                  $dEffect1
+                  (Data.Productors.Instances.$fEffectorMIdentityff_$cmultEff
+                     @ f
+                     $dEffect
+                     $dEffect1) -}
+d1e1e741b1e853f292340ec577c2ee4e
+  $fEffectorMIdentityff1 ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    forall a.
+    Data.Functor.Identity.Identity (f a)
+    -> Data.Functor.Identity.Identity (f a)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ (f :: * -> *)
+                   $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                   $dEffect1 :: Data.Productors.Effect f
+                   @ a
+                   ds :: Data.Functor.Identity.Identity (f a) ->
+                 ds) -}
+f0ad5c58a3e708d45230bd83878ebfa9
+  $fEffectorMIdentityff_$cmultEff ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    forall a. Data.Functor.Identity.Identity (f a) -> f a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Productors.Instances.$fEffectorMIdentityff1
+                  `cast`
+                (forall (f :: * -> *).
+                 <Data.Productors.Effect Data.Functor.Identity.Identity>_R
+                 ->_R <Data.Productors.Effect f>_R
+                 ->_R forall a.
+                      <Data.Functor.Identity.Identity (f a)>_R
+                      ->_R Data.Functor.Identity.NTCo:Identity[0] <f a>_R) -}
+e60aadd31071d26c9be5a52710f9f120
+  $fEffectorMfIdentityf ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    Data.Productors.EffectorM f Data.Functor.Identity.Identity f
+  DFunId[1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U(U(U,U),U)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (f :: * -> *)
+                      $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                      $dEffect1 :: Data.Productors.Effect f.
+                  @ f
+                  @ Data.Functor.Identity.Identity
+                  @ f
+                  $dEffect1
+                  $dEffect
+                  $dEffect1
+                  (Data.Productors.Instances.$fEffectorMfIdentityf_$cmultEff
+                     @ f
+                     $dEffect
+                     $dEffect1) -}
+5df78e9788d13db8c22c865324fdcec7
+  $fEffectorMfIdentityf1 ::
+    Data.Functor.Identity.Identity a
+    -> Data.Functor.Identity.Identity a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a ds :: Data.Functor.Identity.Identity a -> ds) -}
+2eea0c4d208386423b32f1ff36649b8b
+  $fEffectorMfIdentityf_$cmultEff ::
+    (Data.Productors.Effect Data.Functor.Identity.Identity,
+     Data.Productors.Effect f) =>
+    forall a. f (Data.Functor.Identity.Identity a) -> f a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,A><S(S(C(S)L)L),1*U(1*U(1*C1(U),A),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> *)
+                   $dEffect :: Data.Productors.Effect Data.Functor.Identity.Identity
+                   $dEffect1 :: Data.Productors.Effect f
+                   @ a ->
+                 GHC.Base.fmap
+                   @ f
+                   (Data.Productors.$p1Effect @ f $dEffect1)
+                   @ (Data.Functor.Identity.Identity a)
+                   @ a
+                   (Data.Productors.Instances.$fEffectorMfIdentityf1 @ a)
+                     `cast`
+                   (<Data.Functor.Identity.Identity a>_R
+                    ->_R Data.Functor.Identity.NTCo:Identity[0] <a>_R)) -}
+684901d577ff011b073d08d00d435de7
+  $fEffectorMmmm ::
+    (Data.Productors.Effect m, Data.Productors.Effect m,
+     Data.Productors.Effect m, GHC.Base.Monad m) =>
+    Data.Productors.EffectorM m m m
+  DFunId[3]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U><L,A><L,A><L,U(A,C(C1(U)),A,A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (m :: * -> *)
+                      $dEffect :: Data.Productors.Effect m
+                      $dEffect1 :: Data.Productors.Effect m
+                      $dEffect2 :: Data.Productors.Effect m
+                      $dMonad :: GHC.Base.Monad m.
+                  @ m
+                  @ m
+                  @ m
+                  $dEffect
+                  $dEffect
+                  $dEffect
+                  (Data.Productors.Instances.$fEffectorMmmm_$cmultEff
+                     @ m
+                     $dEffect
+                     $dEffect1
+                     $dEffect2
+                     $dMonad) -}
+accceadb0bd801620218944277c12991
+  $fEffectorMmmm_$cmultEff ::
+    (Data.Productors.Effect m, Data.Productors.Effect m,
+     Data.Productors.Effect m, GHC.Base.Monad m) =>
+    forall a. m (m a) -> m a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,A><L,A><L,A><L,U(A,C(C1(U)),A,A,A)>,
+     Unfolding: InlineRule (4, True, True)
+                (\ @ (m :: * -> *)
+                   $dEffect :: Data.Productors.Effect m
+                   $dEffect1 :: Data.Productors.Effect m
+                   $dEffect2 :: Data.Productors.Effect m
+                   $dMonad :: GHC.Base.Monad m
+                   @ a
+                   eta :: m (m a) ->
+                 GHC.Base.join @ m @ a $dMonad eta) -}
+instance Data.Productors.Effect [.]
+  = Data.Productors.Instances.$fEffectm
+instance Data.Productors.EffectorLT [Data.Functor.Identity.Identity,
+                                     .]
+  = Data.Productors.Instances.$fEffectorLTIdentityf
+instance Data.Productors.EffectorM [Data.Functor.Identity.Identity,
+                                    ., .]
+  = Data.Productors.Instances.$fEffectorMIdentityff
+instance Data.Productors.EffectorM [.,
+                                    Data.Functor.Identity.Identity, .]
+  = Data.Productors.Instances.$fEffectorMfIdentityf
+instance Data.Productors.EffectorM [., ., .]
+  = Data.Productors.Instances.$fEffectorMmmm
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

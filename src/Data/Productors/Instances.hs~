@@ -1,0 +1,29 @@
+{-# LANGUAGE MultiParamTypeClasses, FlexibleInstances, UndecidableInstances #-}
+
+module Data.Productors.Instances where
+  import Data.Productors
+  import Data.Functor.Identity
+  import Control.Monad
+
+  instance Monad m => Effect m where
+    eta = return
+
+  instance Effect Identity where
+    eta = Identity
+
+  instance (Effect f) => EffectorLT Identity f where
+    liftEff (Identity x) = eta x
+    
+  instance (Monad m) => EffectorM m m m where
+    -- multEff :: m (m a) -> m a
+    multEff = join
+
+  instance (Effect f) => EffectorM f Identity f where
+    multEff = fmap unid where
+      unid :: Identity a -> a 
+      unid (Identity x) = x
+
+  instance (Effect f) => EffectorM Identity f f where
+    multEff (Identity x) = x
+
+  
